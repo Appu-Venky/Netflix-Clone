@@ -1,0 +1,175 @@
+.navbar {
+    width: 100%;
+    padding: 2px 3%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%,
+            transparent);
+    z-index: 1;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-left img {
+    width: 90px;
+
+
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.navbar-right .icons {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 18px 22px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown p {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown {
+    display: block;
+}
+
+.nav-dark {
+    background: #141414;
+}
+
+.navbar-left .menu-icon {
+    display: none;
+    padding-left: 6%;
+
+}
+
+.mobileview {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #141414;
+    padding: 15px 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.mobileview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.mobileview ul li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e5e5e5;
+    border-bottom: 1px solid #333;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.mobileview ul li:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect */
+.mobileview ul li:hover {
+    background: #333;
+    color: white;
+}
+
+
+@media (max-width :800px) {
+    .navbar {
+        padding: 20px 4px;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar img {
+        width: 70px;
+    }
+
+    .navbar-left .menu-icon {
+        display: block;
+    }
+
+    .mobileview {
+        display: block;
+    }
+
+}
+
+@media (max-width:500px) {
+    .navbar img {
+        height: 40px;
+    }
+
+    .navbar-right {
+        gap: 10px
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar-left .menu-icon {
+        display: block;
+    }
+
+    .mobileview {
+        display: block;
+    }
+}
